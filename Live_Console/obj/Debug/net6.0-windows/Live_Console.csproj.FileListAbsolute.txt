@@ -1,0 +1,17 @@
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.csproj.GenerateResource.cache
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.GeneratedMSBuildEditorConfig.editorconfig
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.AssemblyInfoInputs.cache
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.AssemblyInfo.cs
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.csproj.CoreCompileInputs.cache
+D:\公有库\小工具\Live_Console\Live_Console\bin\Debug\net6.0-windows\Live_Console.exe
+D:\公有库\小工具\Live_Console\Live_Console\bin\Debug\net6.0-windows\Live_Console.deps.json
+D:\公有库\小工具\Live_Console\Live_Console\bin\Debug\net6.0-windows\Live_Console.runtimeconfig.json
+D:\公有库\小工具\Live_Console\Live_Console\bin\Debug\net6.0-windows\Live_Console.dll
+D:\公有库\小工具\Live_Console\Live_Console\bin\Debug\net6.0-windows\ref\Live_Console.dll
+D:\公有库\小工具\Live_Console\Live_Console\bin\Debug\net6.0-windows\Live_Console.pdb
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.dll
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\ref\Live_Console.dll
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.pdb
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.genruntimeconfig.cache
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.Properties.Resources.resources
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.FrmMain.resources
