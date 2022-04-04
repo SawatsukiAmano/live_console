@@ -18,6 +18,10 @@ namespace Live_Console
 
         void GenerateControls()
         {
+            if (!File.Exists(filePath))
+            {
+                File.Create(filePath);//创建INI文件
+            }
             if (File.Exists(filePath))
             {
                 panlApps.Controls.Clear();
@@ -77,6 +81,15 @@ namespace Live_Console
                     chk2.Text = "显示";
                     chk2.UseVisualStyleBackColor = true;
 
+                    Button btnStart = new Button();
+                    btnStart.Name = "btnStart" + i;
+                    btnStart.Location = new System.Drawing.Point(800, 10 + i * 30);
+                    btnStart.Size = new System.Drawing.Size(75, 23);
+                    btnStart.Text = "启动";
+                    btnStart.UseVisualStyleBackColor = true;
+                    btnStart.Click += new System.EventHandler(btnStartOneClick);
+
+
                     if (i < iniNums)
                     {
                         chk.Checked = INIHelper.Read("应用" + i.ToString(), "启动", "0", filePath) == "1" ? true : false;
@@ -93,9 +106,73 @@ namespace Live_Console
                     panlApps.Controls.Add(txtCommand);
                     panlApps.Controls.Add(btnPath);
                     panlApps.Controls.Add(chk2);
+                    panlApps.Controls.Add(btnStart);
                 }
             }
         }
+
+        private void btnStartOneClick(object? sender, EventArgs e)
+        {
+
+            string index = ((Button)sender).Name.Replace("btnStart", "");
+            Dictionary<string, string> dic = new();
+            foreach (var item in panlApps.Controls)
+            {
+                if (item is CheckBox)
+                {
+                    if (((CheckBox)item).Name.Contains($"chkView{index}"))
+                    {
+                        dic.Add("显示", ((CheckBox)item).Checked ? "1" : "0");
+                    }
+                }
+                else
+                if (item is TextBox)
+                {
+                    //获取路径
+                    if (((TextBox)item).Name.Contains($"txtPath{index}"))
+                    {
+                        dic.Add("路径", ((TextBox)item).Text);
+                    }
+                    else if (((TextBox)item).Name.Contains($"txtCmd{index}"))
+                    {
+                        dic.Add("命令", ((TextBox)item).Text);
+                    }
+                }
+            }
+
+            if (string.IsNullOrEmpty(dic["命令"].Trim()))
+            {
+                try
+                {
+                    //直接启动程序
+                    Process.Start(dic["路径"]);
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show(dic["名称"] + "直接启动失败,请使用命令行模式");
+                }
+            }
+            else
+            {
+                string path = dic["路径"].Remove(dic["路径"].LastIndexOf('\\'));
+                Process p = new Process();
+                //设置要启动的应用程序
+                p.StartInfo.FileName = "cmd.exe";
+                p.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
+                if (dic["显示"] == "0")
+                {
+                    p.StartInfo.CreateNoWindow = true;//不显示程序窗口
+                }
+                p.Start();
+                //进入目录
+                p.StandardInput.WriteLine(path.Substring(0, 1) + ":");
+                p.StandardInput.WriteLine(@"cd " + path);
+                //执行命令
+                p.StandardInput.WriteLine(dic["命令"]);
+            }
+
+        }
+
         string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sys.ini");//在当前程序路径创建
 
 
@@ -183,7 +260,7 @@ namespace Live_Console
                         Process p = new Process();
                         //设置要启动的应用程序
                         p.StartInfo.FileName = "cmd.exe";
-                        p.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息]
+                        p.StartInfo.RedirectStandardInput = true;//接受来自调用程序的输入信息
                         if (dic["显示" + i] == "0")
                         {
                             p.StartInfo.CreateNoWindow = true;//不显示程序窗口
@@ -252,5 +329,6 @@ namespace Live_Console
                 }
             }
         }
+
     }
 }

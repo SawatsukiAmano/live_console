@@ -15,3 +15,4 @@ D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_C
 D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.genruntimeconfig.cache
 D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.Properties.Resources.resources
 D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.FrmMain.resources
+D:\公有库\小工具\Live_Console\Live_Console\obj\Debug\net6.0-windows\Live_Console.csproj.AssemblyReference.cache

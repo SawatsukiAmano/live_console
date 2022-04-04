@@ -1,3 +1,5 @@
 #为注释
 /lib
 Live_Console/bin/
+*.gitignore
+*.vs
