@@ -14,7 +14,7 @@ namespace Live_Console
             Process[] processes = Process.GetProcessesByName(Application.ProductName);
             if (processes.Length > 1)
             {
-                MessageBox.Show("应用程序正在运行中...");
+                MessageBox.Show("脫娄脫脙鲁脤脨貌脮媒脭脷脭脣脨脨脰脨...");
                 Environment.Exit(1);
             }
             else
@@ -23,6 +23,7 @@ namespace Live_Console
                 // see https://aka.ms/applicationconfiguration.
                 ApplicationConfiguration.Initialize();
                 Application.Run(new FrmMain());
+                
             }
         }
     }
