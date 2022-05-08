@@ -14,7 +14,7 @@ namespace Live_Console
             Process[] processes = Process.GetProcessesByName(Application.ProductName);
             if (processes.Length > 1)
             {
-                MessageBox.Show("Ó¦ÓÃ³ÌÐòÕýÔÚÔËÐÐÖÐ...");
+                MessageBox.Show("应用程序正在运行中...");
                 Environment.Exit(1);
             }
             else
