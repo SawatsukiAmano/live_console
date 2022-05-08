@@ -13,4 +13,4 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Live_Console
-build_property.ProjectDir = D:\公有库\小工具\Live_Console\Live_Console\
+build_property.ProjectDir = D:\公有库\Live_Console\Live_Console\
